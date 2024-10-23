@@ -4,7 +4,7 @@ import gzip
 # Reads MNIST training image set and stores it as a 60000 x 784 matrix
 # There are 60000 images, each of which is 28 x 28 pixels
 # Each image is stored as a 28x28 = 784 dimensional row vector in the matrix
-def mnist_train_set_read():
+def train_set_read():
     f = gzip.open('train-images-idx3-ubyte.gz','r')
     f.read(16) # skip file header
     buf = f.read(60000*28*28)
@@ -20,7 +20,7 @@ def mnist_train_set_read():
 # Opens MNIST test image set and stores it as a 10000 x 784 matrix
 # There are 10000 images, each of which is 28 x 28 pixels
 # Each image is stored as a 28x28 = 784 dimensional row vector in the matrix
-def mnist_test_set_read():
+def test_set_read():
     f = gzip.open('t10k-images-idx3-ubyte.gz','r')
     f.read(16) # skip header
     buf = f.read(10000*28*28)
