@@ -1,3 +1,6 @@
+import numpy as np
+import gzip
+
 # Reads MNIST training image set and stores it as a 60000 x 784 matrix
 # There are 60000 images, each of which is 28 x 28 pixels
 # Each image is stored as a 28x28 = 784 dimensional row vector in the matrix
